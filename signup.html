@@ -1,98 +1,170 @@
 <!doctype html>
-<html lang="en" data-bs-theme="auto">
+<html lang="en">
 
 <head>
-    <script src="/docs/5.3/assets/js/color-modes.js"></script>
-
+    <!-- This is a bootstrap template that I customize to build an adress book -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.112.5">
-    <title>NewsLetter Signup</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <meta name="generator" content="Hugo 0.104.2">
+    <title>Signin Template · Bootstrap v5.2</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
 
-
-
-
-
-
-
-
+    <!-- Favicons -->
+    <link rel="favicon" href="#" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
 
 
     <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+        
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+        
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+        
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+        
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+        
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+        
+        body {
+            background-image: url(images/Frame\ 2.png)
+        }
+        
         html,
         body {
             height: 100%;
-            background-image: url(images/Frame\ 3.png);
+        }
+        
+        body {
+            display: flex;
+            align-items: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
         
         .form-signin {
             max-width: 330px;
-            padding: 1rem;
+            padding: 15px;
         }
         
         .form-signin .form-floating:focus-within {
             z-index: 2;
         }
         
-        .form-signin input[type="email"] {
+        .topInput {
             margin-bottom: -1px;
             border-bottom-right-radius: 0;
             border-bottom-left-radius: 0;
         }
         
-        .form-signin input[type="password"] {
+        .midInput {
+            margin-bottom: -1px;
+            border-radius: 0;
+        }
+        
+        .bottomInput {
             margin-bottom: 10px;
             border-top-left-radius: 0;
             border-top-right-radius: 0;
         }
         
-        .h3 {
-            color: whitesmoke;
+        .profilPic {
+            transform: scale(1);
+            transition: 1s;
         }
         
-        .form-check-label {
-            color: whitesmoke;
+        .profilPic:hover {
+            transform: scale(1.05);
+            transition: 0.2s;
         }
     </style>
 
 
+    <!-- Custom styles for this template -->
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
 
     <main class="form-signin w-100 m-auto">
+
+        <a href="https://github.com/stevengiguere" target="_blank"><img class="mb-4 border border-info rounded-circle profilPic" src="images/my photo.png" alt="" width="100"></a>
+        <h1 class="h2 mb-4 fw-bold text-white">Sign up to my Newsletter</h1>
+
         <form action="/" method="post">
-            <!-- <img class="mb-4" src="images/19038824-removebg-preview.png" alt="" width="72" height="57"> -->
-            <h1 class="h3 mb-3 fw-normal">Signup !</h1>
-
-
             <div class="form-floating">
-                <input type="text" class="form-control" name="fname" placeholder="First name" required autofocus>
+                <input type="text" name="fName" class="topInput form-control" placeholder="First Name" required autofocus>
                 <label for="floatingInput">First Name</label>
             </div>
-
             <div class="form-floating">
-                <input type="text" class="form-control" name="lname" placeholder="Last name" required>
+                <input type="text" name="lName" class="midInput form-control" placeholder="Last Name" required>
                 <label for="floatingInput">Last Name</label>
             </div>
             <div class="form-floating">
-                <input type="email" class="form-control" name="email" placeholder="email" required>
-                <label for="floatingPassword">Email address</label>
+                <input type="email" name="email" class="bottomInput form-control" placeholder="email@example.com" required>
+                <label for="floatingPassword">email@example.com</label>
             </div>
 
-            <div class="form-check text-start my-3">
-                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-        Remember me
-      </label>
-            </div>
-            <button class=" btn btn-outline-secondary w-100 py-2 " type="submit ">Sign me up!</button>
-            <p class=" mt-5 mb-3 text-body-secondary ">&copy; Saniya Pathan </p>
+            <button class="w-100 btn btn-lg btn-outline-light" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted">&copy; Saniya Pathan</p>
         </form>
     </main>
-    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz " crossorigin="anonymous "></script>
 
-    </body>
+
+
+</body>
 
 </html>
