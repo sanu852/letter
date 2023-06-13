@@ -26,7 +26,7 @@ app.post("/", function(req, res) {
 
     const options = {
         method: "POST",
-        auth: "bla-bla-bla:164777700ba0a5ad0ae8cd53217f5950-us9"
+        auth: "bla-bla-bla:0e1db8d71a67f4bdec208c98edcb90e1-us9"
     };
     const request = https.request(url, options, function(response) {
         const status = response.statusCode
